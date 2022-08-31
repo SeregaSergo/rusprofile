@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rusprofile:
+    build: ./
+    command: ./server
+    ports:
+      - 8080:8080
+      - 8081:8081
+    environment:
+      - REST_GATEWAY_ADDR=:8080
+      - GRPC_ADDR=:8081
